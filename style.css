@@ -1,0 +1,72 @@
+*{
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:100vh ;
+    overflow-x:hidden ;
+    background: url('background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: monospace;
+    }
+h1{
+    font-size:160px;
+    font-weight: 200;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    
+    background-image: linear-gradient(to left , rgb(215, 157, 11),rgb(255, 3, 66));
+    padding: 30px 70px;
+    min-width: 800px;
+    text-anchor: center;
+    position: relative;
+}
+h1::before{
+    content: '';
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image:linear-gradient(to right ,rgb(1, 94, 255) ,rgba(255, 0, 0, 0.959)) ;
+    z-index: -1;
+    box-shadow :-25px 25px 90px green,25px -25px 90px yellow;
+    opacity:50%;
+    animation: effect 1s linear infinite;
+}
+@keyframes effect{
+    0%, 100%{
+        box-shadow: -25px 25px 90px red,25px -25px 90px green;
+    }
+    20%{
+        box-shadow: -25px 25px 90px red,25px -25px 90px green;
+    }
+    40%{
+        box-shadow: -25px 25px 90px red,25px -25px 90px green;
+    }
+    60%{
+        box-shadow: -25px 25px 90px red,25px -25px 90px green;
+    }
+    80%{
+        box-shadow: -25px 25px 90px red,25px -25px 90px green;
+    }
+}
+h1::after{
+    content: '';
+    position: absolute;
+    width: 96%;
+    height: 92%;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    top:3%;
+    background-color: #222;
+    z-index: -1;
+
+}
